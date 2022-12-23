@@ -1,0 +1,46 @@
+#waitingArea{
+    height: 90vh;
+    width: 50vw;
+   margin-left: 50vw;
+
+}
+
+#flightdeals{
+    position:absolute;
+}
+
+.table-bordered {
+    justify-self: center;
+    height: 80vh;
+    width: 30vw;
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-top: 1px solid black;
+border-bottom: 1px solid black;
+
+    font-size: 10px;
+
+}
+#header{
+    margin-top: -1vh;
+}
+.table-bordered >tr{
+ 
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-top:1px solid black
+
+}
+
+
+
+#aa td{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+ 
+}
+#aa th{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 10px;
+}

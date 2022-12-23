@@ -1,0 +1,14 @@
+#navbar{
+width: 100vw;
+    position: fixed;
+    z-index: 99;
+}
+
+
+.nav{
+color: black;
+
+}
+#sty{
+    text-decoration: none;
+}
