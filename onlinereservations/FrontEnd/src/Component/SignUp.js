@@ -1,6 +1,21 @@
 import { Link, useNavigate } from 'react-router-dom';
 import '../CSS/SignUp.css';
+import { useState } from 'react';
+
+
+
 const SignUp=()=> {
+
+   const [passengerData , setPassengerData] =useState({
+      firstName:"",
+      lastName:"",
+      userName:"",
+      password:"",
+      email:"",
+      address:""
+   })
+
+   const{firstName,lastName,userName,password,email,address} =passengerData;
 
 const goto = useNavigate ();
 
@@ -19,7 +34,9 @@ goto ("/Seats");
          <div class="row" >
                <div class="input-field col s6 ">
                 
-               <input type="text" id="input" autoComplete="on" placeholder="First Name"  style={{ height: '1.5rem', width: '20rem', marginTop: '1rem' }} />                  {/* <label for="name">Username</label> */}
+               <input onChange={(e)=> handleChange(e)} type="text" id="input" autoComplete="on" placeholder="First Name"  
+               style={{ height: '1.5rem', width: '20rem', marginTop: '1rem' }} />   
+                              {/* <label for="name">Username</label> */}
                 
 
                </div>
@@ -28,7 +45,8 @@ goto ("/Seats");
                
                <div class="input-field col s6 ">
                   {/* <label for="password">Password</label> */}
-                  <input id="name" type="text" placeholder="Last Name" class="validate"  required/>               </div>
+                  <input  onChange={(e)=> handleChange(e)} id="name" type="text" placeholder="Last Name" class="validate"  required/>   
+                              </div>
             </div>
 
 
@@ -37,7 +55,8 @@ goto ("/Seats");
             <div class="row" >
                <div class="input-field col s6 ">
                   <i class="material-icons prefix">account_circle</i>
-                  <input  id="name" type="text"   placeholder="Username" class="  validate" required/>
+                  <input  onChange={(e)=> handleChange(e)}
+                  id="name" type="text"   placeholder="Username" class="  validate" required/>
                   {/* <label for="name">Username</label> */}
 
                </div>
@@ -47,20 +66,23 @@ goto ("/Seats");
                <div class="input-field col s6 ">
                <i class="material-icons prefix">lock</i>
 
-                  <input id="name" type="password" placeholder="Password" class="validate" required/>
+                  <input  onChange={(e)=> handleChange(e)}
+                   id="name" type="password" placeholder="Password" class="validate" required/>
                </div>
             </div>
             <div class="row">
                <div class="input-field col s10">
                <i class="material-icons prefix">email</i>
-                  <input placeholder="Email" id="name" type="email" class="validate"/>
+                  <input   onChange={(e)=> handleChange(e)}
+                   placeholder="Email" id="name" type="email" class="validate"/>
                   {/* <label for="email">Email</label> */}
                </div>
             </div>
             <div class="row">
                <div class="input-field col s10">
                   <i class="material-icons prefix">mode_edit</i>
-                  <textarea id="address" class="materialize-textarea"></textarea>
+                  <textarea   onChange={(e)=> handleChange(e)}
+                   id="address" class="materialize-textarea"></textarea>
                   <label for="address">Address</label>
                </div>
             </div>
@@ -70,9 +92,9 @@ goto ("/Seats");
                   <p>
                      
                   <Link to="">
-<button
-onClick={handleSubmit} 
-id=" menu1" class="Login Button" type="submit" style={{display:"inline",fontFamily:"serif", fontSize:"2rem",border:"none", width:"15rem", height:"3rem",  marginLeft:"25rem", backgroundColor:"blue",color:"white"}}  >Sign Up</button>
+<button onClick={(e)=> addDetails(e)}
+
+id=" menu1" class="Login Button" type="submit" style={{display:"inline",fontFamily:"serif", fontSize:"2rem", width:"30rem", height:"3rem",  marginLeft:"50vw", backgroundColor:"blue",color:"white"}}  >Sign Up</button>
 </Link> 
           </p>
                 </div>

@@ -3,8 +3,7 @@ import'../CSS/FlightDeals.css';
 function FlightDeals() {
      return (
         <div > 
-        <img id='waitingArea' src={require("../images/waitingArea.jpg")}/> 
-               <div id='flightdeals' class="card"  style={{marginTop:"-79vh",height:"82vh"}}>
+               <div id='flightdeals' class="card"  style={{marginTop:"11.5vh",height:"99vh",width:"50vw"}}>
                 <div id='header'>  
                        <div class="card-header" >
      Flight Deals
@@ -84,11 +83,18 @@ function FlightDeals() {
 
     </table>
     
+
+
     </div>
+
+
 
     </div>
      </div>
-     
+           
+        <img id='waitingArea'   src={require("../images/waitingArea.jpg")}/> 
+    
+
 </div>);
     }
     

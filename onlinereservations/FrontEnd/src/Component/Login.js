@@ -51,7 +51,7 @@ const Login=()=> {
              <div class="input-field col s12">
                 
                    
-                <Link to="/SignUp">
+                <Link to="/Seats">
 <button onClick={onClick}  id=" menu1" class="Login Button" type="submit" style={{width:"10rem", height:"3rem",border:"none",alignSelf:"left", backgroundColor:"blue",color:"white"}}>Log In</button>
 </Link> 
 
@@ -61,8 +61,14 @@ const Login=()=> {
 <Link to="/Login">
 <button id=" menu1" class="Login Button" type="submit" style={{fontFamily:"serif", width:"10rem", height:"3rem",  marginTop:"10px",border:"none",marginLeft:"1rem" , backgroundColor:"blue",color:"white"}}>Change Password</button>
 </Link> 
+<br/>
 
 
+<p style={{marginTop:"3vh"}}>not registered?</p>
+
+<Link to="/SignUp">
+<button onClick={onClick}  id=" menu1" class="Login Button" type="submit" style={{width:"10rem", height:"3rem",border:"none",alignSelf:"left", backgroundColor:"blue",color:"white"}}>Sign Up</button>
+</Link>
                
               </div>
           </div>
